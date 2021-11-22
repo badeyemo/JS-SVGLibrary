@@ -6,7 +6,7 @@ class SVGElement {
         return this;
     }
     attr(attrs) {
-        for (const [key, value] of object.entries(attrs)) {
+        for (const [key, value] of Object.entries(attrs)) {
             this.node.setAttributeNS(null, key, value);
         }
         return this;
@@ -19,7 +19,7 @@ class SVGElement {
     }
 }
 
-class sight {
+class Sight {
     constructor(selector, width, height) {
         this.svg = new SVGElement('svg').attr({ viewbox: `0 0 ${width} ${height}`
         }).append(selector);
